@@ -1,4 +1,3 @@
-
 # Designing Workflow Management API
 This repository serves as the foundation for diverse solutions, encompassing workflow management tools, approval applications, automated processes, and various internal tools. Virtually all management or administrative tasks can be conceptualized as sequences of requests and decisions. A request is made, seeking permission to perform an action or access a resource, and a subsequent decision is made, guided by predefined logic.
 
