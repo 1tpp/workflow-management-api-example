@@ -1,4 +1,12 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
+import {
+  Controller,
+  Get,
+  Post,
+  Body,
+  Patch,
+  Param,
+  Delete,
+} from '@nestjs/common';
 import { TransitionsService } from './transitions.service';
 import { CreateTransitionDto } from './dto/create-transition.dto';
 import { UpdateTransitionDto } from './dto/update-transition.dto';
@@ -23,7 +31,10 @@ export class TransitionsController {
   }
 
   @Patch(':id')
-  update(@Param('id') id: string, @Body() updateTransitionDto: UpdateTransitionDto) {
+  update(
+    @Param('id') id: string,
+    @Body() updateTransitionDto: UpdateTransitionDto,
+  ) {
     return this.transitionsService.update(+id, updateTransitionDto);
   }
 

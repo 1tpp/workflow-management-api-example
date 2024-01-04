@@ -11,7 +11,9 @@ describe('RequestStakeHoldersController', () => {
       providers: [RequestStakeHoldersService],
     }).compile();
 
-    controller = module.get<RequestStakeHoldersController>(RequestStakeHoldersController);
+    controller = module.get<RequestStakeHoldersController>(
+      RequestStakeHoldersController,
+    );
   });
 
   it('should be defined', () => {

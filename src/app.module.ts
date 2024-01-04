@@ -1,16 +1,18 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
+
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { UsersModule } from './users/users.module';
-import { ProcessesModule } from './processes/processes.module';
-import { RequestsModule } from './requests/requests.module';
-import { StatesModule } from './states/states.module';
-import { ActionsModule } from './actions/actions.module';
-import { TransitionsModule } from './transitions/transitions.module';
-import { RequestDataModule } from './request-data/request-data.module';
-import { ProcessUsersModule } from './process-users/process-users.module';
-import { RequestStakeHoldersModule } from './request-stake-holders/request-stake-holders.module';
+
+import { UsersModule } from './modules/users/users.module';
+import { ProcessesModule } from './modules/processes/processes.module';
+import { RequestsModule } from './modules/requests/requests.module';
+import { StatesModule } from './modules/states/states.module';
+import { ActionsModule } from './modules/actions/actions.module';
+import { TransitionsModule } from './modules/transitions/transitions.module';
+import { RequestDataModule } from './modules/request-data/request-data.module';
+import { ProcessUsersModule } from './modules/process-users/process-users.module';
+import { RequestStakeHoldersModule } from './modules/request-stake-holders/request-stake-holders.module';
 
 @Module({
   imports: [

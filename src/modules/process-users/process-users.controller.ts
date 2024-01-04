@@ -1,4 +1,12 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
+import {
+  Controller,
+  Get,
+  Post,
+  Body,
+  Patch,
+  Param,
+  Delete,
+} from '@nestjs/common';
 import { ProcessUsersService } from './process-users.service';
 import { CreateProcessUserDto } from './dto/create-process-user.dto';
 import { UpdateProcessUserDto } from './dto/update-process-user.dto';
@@ -23,7 +31,10 @@ export class ProcessUsersController {
   }
 
   @Patch(':id')
-  update(@Param('id') id: string, @Body() updateProcessUserDto: UpdateProcessUserDto) {
+  update(
+    @Param('id') id: string,
+    @Body() updateProcessUserDto: UpdateProcessUserDto,
+  ) {
     return this.processUsersService.update(+id, updateProcessUserDto);
   }
 

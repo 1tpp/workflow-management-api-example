@@ -9,7 +9,9 @@ describe('RequestStakeHoldersService', () => {
       providers: [RequestStakeHoldersService],
     }).compile();
 
-    service = module.get<RequestStakeHoldersService>(RequestStakeHoldersService);
+    service = module.get<RequestStakeHoldersService>(
+      RequestStakeHoldersService,
+    );
   });
 
   it('should be defined', () => {

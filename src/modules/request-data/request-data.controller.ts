@@ -1,4 +1,12 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
+import {
+  Controller,
+  Get,
+  Post,
+  Body,
+  Patch,
+  Param,
+  Delete,
+} from '@nestjs/common';
 import { RequestDataService } from './request-data.service';
 import { CreateRequestDatumDto } from './dto/create-request-datum.dto';
 import { UpdateRequestDatumDto } from './dto/update-request-datum.dto';
@@ -23,7 +31,10 @@ export class RequestDataController {
   }
 
   @Patch(':id')
-  update(@Param('id') id: string, @Body() updateRequestDatumDto: UpdateRequestDatumDto) {
+  update(
+    @Param('id') id: string,
+    @Body() updateRequestDatumDto: UpdateRequestDatumDto,
+  ) {
     return this.requestDataService.update(+id, updateRequestDatumDto);
   }
 
