@@ -16,7 +16,6 @@ import { StatesModule } from './modules/states/states.module';
 import { ActionsModule } from './modules/actions/actions.module';
 import { TransitionsModule } from './modules/transitions/transitions.module';
 import { RequestDataModule } from './modules/request-data/request-data.module';
-import { ProcessUsersModule } from './modules/process-users/process-users.module';
 import { RequestStakeHoldersModule } from './modules/request-stake-holders/request-stake-holders.module';
 
 @Module({
@@ -60,7 +59,6 @@ import { RequestStakeHoldersModule } from './modules/request-stake-holders/reque
     ActionsModule,
     TransitionsModule,
     RequestDataModule,
-    ProcessUsersModule,
     RequestStakeHoldersModule,
     AuthModule,
   ],
