@@ -9,6 +9,7 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 
 import { UsersModule } from './modules/users/users.module';
+import { AuthModule } from './modules/auth/auth.module';
 import { ProcessesModule } from './modules/processes/processes.module';
 import { RequestsModule } from './modules/requests/requests.module';
 import { StatesModule } from './modules/states/states.module';
@@ -17,7 +18,6 @@ import { TransitionsModule } from './modules/transitions/transitions.module';
 import { RequestDataModule } from './modules/request-data/request-data.module';
 import { ProcessUsersModule } from './modules/process-users/process-users.module';
 import { RequestStakeHoldersModule } from './modules/request-stake-holders/request-stake-holders.module';
-import { AuthModule } from './auth/auth.module';
 
 @Module({
   imports: [
