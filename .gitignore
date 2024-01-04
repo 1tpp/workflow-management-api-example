@@ -2,6 +2,9 @@
 /dist
 /node_modules
 
+.env*
+!.env.example
+
 # Logs
 logs
 *.log
@@ -17,6 +20,7 @@ lerna-debug.log*
 # Tests
 /coverage
 /.nyc_output
+test.py
 
 # IDEs and editors
 /.idea
@@ -33,3 +37,6 @@ lerna-debug.log*
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+
+# misc
+postgres-data/
