@@ -17,6 +17,7 @@ import { TransitionsModule } from './modules/transitions/transitions.module';
 import { RequestDataModule } from './modules/request-data/request-data.module';
 import { ProcessUsersModule } from './modules/process-users/process-users.module';
 import { RequestStakeHoldersModule } from './modules/request-stake-holders/request-stake-holders.module';
+import { AuthModule } from './auth/auth.module';
 
 @Module({
   imports: [
@@ -61,6 +62,7 @@ import { RequestStakeHoldersModule } from './modules/request-stake-holders/reque
     RequestDataModule,
     ProcessUsersModule,
     RequestStakeHoldersModule,
+    AuthModule,
   ],
   controllers: [AppController],
   providers: [AppService],
