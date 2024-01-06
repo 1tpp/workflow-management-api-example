@@ -17,10 +17,17 @@ export class Process {
   @Column()
   name: string;
 
-  @Column()
-  description: string;
-
   @ManyToMany(() => User)
-  @JoinTable()
+  @JoinTable({
+    name: 'processes_users',
+    joinColumn: {
+      name: 'process',
+      referencedColumnName: 'id',
+    },
+    inverseJoinColumn: {
+      name: 'user',
+      referencedColumnName: 'id',
+    },
+  })
   users: User[];
 }

@@ -16,7 +16,6 @@ import { StatesModule } from '@/modules/states/states.module';
 import { ActionsModule } from '@/modules/actions/actions.module';
 import { TransitionsModule } from '@/modules/transitions/transitions.module';
 import { RequestDataModule } from '@/modules/request-data/request-data.module';
-import { RequestStakeHoldersModule } from '@/modules/request-stake-holders/request-stake-holders.module';
 import { RolesModule } from '@/modules/roles/roles.module';
 
 @Module({
@@ -36,8 +35,6 @@ import { RolesModule } from '@/modules/roles/roles.module';
           database: configService.get('DB_NAME'),
         };
 
-        console.log(dbConfig);
-
         return {
           type: 'postgres',
           host: dbConfig.host,
@@ -53,15 +50,14 @@ import { RolesModule } from '@/modules/roles/roles.module';
       },
       inject: [ConfigService],
     }),
+    AuthModule,
     UsersModule,
     ProcessesModule,
+    TransitionsModule,
     RequestsModule,
     StatesModule,
     ActionsModule,
-    TransitionsModule,
     RequestDataModule,
-    RequestStakeHoldersModule,
-    AuthModule,
     RolesModule,
   ],
   controllers: [AppController],
