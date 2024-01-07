@@ -25,6 +25,10 @@ export class User {
   password: string;
 
   @ManyToMany(() => Role)
-  @JoinTable()
+  @JoinTable({
+    name: 'users_roles',
+    joinColumn: { name: 'user', referencedColumnName: 'id' },
+    inverseJoinColumn: { name: 'role', referencedColumnName: 'id' },
+  })
   roles: Role[];
 }
